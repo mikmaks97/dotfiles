@@ -8,8 +8,6 @@ set visualbell
 
 set background=dark
 colorscheme solarized
-highlight Normal ctermbg=NONE
-highlight Nontext ctermbg=NONE
 
 set autoindent
 set smartindent
