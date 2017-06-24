@@ -1,3 +1,14 @@
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'rust-lang/rust.vim'
+
+call vundle#end()
+
 syntax enable
 set number
 set backspace=indent,eol,start
@@ -8,15 +19,11 @@ set visualbell
 
 set background=dark
 colorscheme solarized
-highlight Normal ctermbg=NONE
-highlight Nontext ctermbg=NONE
 
-set autoindent
+filetype plugin indent on
 set smartindent
 set smarttab
-set tabstop=4
-set softtabstop=4
-set expandtab
+set autoindent
 
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
