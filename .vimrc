@@ -11,6 +11,7 @@ Plugin 'itchyny/lightline.vim'
 
 call vundle#end()
 
+set clipboard=unnamed
 syntax enable
 set number
 set mouse=a
