@@ -7,7 +7,9 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'scrooloose/nerdcommenter'  "\cc or c<SPACE> to comment
 Plugin 'scrooloose/nerdtree'
-Plugin 'itchyny/lightline.vim'
+Plugin 'yuezk/vim-js'  " recommended by vim-jsx-pretty
+Plugin 'HerringtonDarkholme/yats.vim'  " recommended by vim-jsx-pretty
+Plugin 'MaxMEllon/vim-jsx-pretty'
 
 call vundle#end()
 
@@ -24,7 +26,6 @@ set colorcolumn=80  "highlight the 80th column with red
 
 set background=dark
 colorscheme solarized
-set laststatus=2  "show lightline even when one pane is open
 
 filetype plugin indent on
 set smartindent
@@ -55,3 +56,22 @@ augroup AutoSaveFolds
   autocmd BufWinLeave * mkview
   autocmd BufWinEnter * silent loadview
 augroup END
+
+
+autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
+" dark red
+hi tsxTagName guifg=#E06C75
+
+" orange
+hi tsxCloseString guifg=#F99575
+hi tsxCloseTag guifg=#F99575
+hi tsxCloseTagName guifg=#F99575
+hi tsxAttributeBraces guifg=#F99575
+hi tsxEqual guifg=#F99575
+
+" yellow
+hi tsxAttrib guifg=#F8BD7F cterm=italic
+" light-grey
+hi tsxTypeBraces guifg=#999999
+" dark-grey
+hi tsxTypes guifg=#666666
